@@ -1,0 +1,32 @@
+@import 'settings';
+
+/* fonts */
+$primary-font: 'TTDrugsThin', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+$secondary-font-condenced: 'Open Sans Condensed', sans-serif;
+
+/* colors */
+$primary-color: #ec3e01;
+$white-color: #ffffff;
+$gray-color: #333333;
+
+body {
+
+  // Для телефонов (вертикальных)
+  @include respond-to(mobile) { background: red; };
+  
+  // Для телефонов (больших?? черная дыра.)
+  @include respond-to(handhelds) { background: black; };
+  
+  // Для телефонов(горизонтальных)
+  @include respond-to(wide-handhelds) { background: blue; };
+  
+  // Для планшетов (вертикальных)
+  @include respond-to(tablets) { background: green; };
+  
+  // Для планшетов (горизонтальных)
+  @include respond-to(wide-tablets) { background: orange; };
+  
+  // Для больших мониторов
+  @include respond-to(tv) {background: none;};
+}
