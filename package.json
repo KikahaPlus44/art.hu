@@ -45,5 +45,8 @@
     "url": "https://github.com/KikahaPlus44/myBoilerPlate.git"
   },
   "author": "Vally Pepyako",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "masonry-layout": "^4.0.0"
+  }
 }

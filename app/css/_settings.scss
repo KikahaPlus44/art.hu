@@ -1,5 +1,7 @@
 
 
+
+
 /* MIXINS */
 @mixin respond-to($media) {
   @if $media == mobile {
@@ -26,7 +28,8 @@
 // =======================================================================// 
 
 /* connecting google fonts */
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Hammersmith+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,700,500,500italic,400italic&subset=latin-ext);
 
 // Use http://everythingfonts.com/font-face 
 @mixin font-face($font-family, $file-path) {
@@ -53,19 +56,26 @@
 }
 
 // Font Mixin
-@mixin font-type($font-family, $font-size, $line-height, $letter-spacing) {
+@mixin font-type($font-family, $font-size, $line-height, $letter-spacing, $color) {
 	font-family: $font-family;
 	font-size: $font-size;
 	line-height: $line-height;
 	letter-spacing: $letter-spacing;
+	color: $color;
 }
 
-// Add local fonts from mixin
-@include font-face(HelveticaNeue, 'HelveticaNeue');
-
 // Fonts variables
-$main-font: 'HelveticaNeue', sans-serif;
-$second-font: 'HelveticaNeue', sans-serif;
+// header font
+$h-font: 'Hammersmith One', sans-serif;
+// content font
+$c-font: 'Roboto Mono', sans-serif;
+
+/* Colors variables*/
+$cb: #000;
+$cb-light: #131313;
+$cb-midle: #1F1F1F;
+$cw-dark: #C4C4C4;
+$cw: #fff;
 
 // =======================================================================// 
 //                           AUTO SPRITES SYSTEM                           //        
@@ -102,7 +112,7 @@ body {
 	height:100%;
 	
 	/* vertical rhytm */
-	@include font-type($second-font, 14px, 20px, 0px);
+	@include font-type($c-font, 14px, 20px, 0px, $cw-dark);
 	
 	/* webkut font smoothe*/
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -113,10 +123,10 @@ button, select {-webkit-appearance: none;}
 
 /* for right vertical rhytm <p> margin-bottom = 2 х line-heigth (default 10px) */
 p {
-	margin-bottom: 20px; 
+	// margin-bottom: 10px; 
 }
 	/* <p> like header */
-	.lead {}
+	.lead { }
 	
 	/* <p> colors */
 	.text-muted {}
@@ -139,23 +149,31 @@ p {
 	.text-right {}
 	.text-justify {}
 		
-a {
-	text-decoration: none;
+a {text-decoration: underline; color: inherit;
 	
 	&:hover {}
 	&:active {}
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-	font-family: $main-font;
+	font-family: $h-font;
 	font-weight: bold;
+	color: $cw-dark;
+	margin-bottom: 10px;
+}
+
+// подзаголовок 
+.sub-header {
+	@include font-type($c-font, 12px, 12px, 0px, $cw-dark);
 }
 
 h1, .h1 {
+	@include font-type($h-font, 36px, 36px, 2px, $cw-dark);
 	small, .small {}
 }
 
 h2, .h2 {
+	@include font-type($c-font, 18px, 1.5, 0px, $cw-dark);
 }
 
 h3, .h3 {
@@ -396,13 +414,16 @@ For select use .form-control or use multiple, for show more them one options.
 
 .btn-default,
 .btn-primary {
-	@include font-type($second-font, 15px, 20px, 0px);
+	@include font-type($h-font, 15px, 20px, 0px, $cb-light);
 	text-transform: uppercase;
 }
 
 /* images */
-img {}
-.img-responsive {}
+img {
+	width: 100%;
+	height: auto;
+}
+.img-responsive { }
 .img-rounded {}
 .img-circle {}
 .img-thumbnail {}

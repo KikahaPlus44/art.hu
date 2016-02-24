@@ -9,21 +9,39 @@ Icon classes can be used entirely standalone. They are named after their origina
 <img class="icon-home" />
 ```
 */
-.icon-mind {
-  background-image: url(../images.png);
+.icon-audio {
+  background-image: url(../images/sprites.png);
+  background-position: -110px 0px;
+  width: 54px;
+  height: 54px;
+}
+.icon-main {
+  background-image: url(../images/sprites.png);
   background-position: 0px 0px;
-  width: 21px;
-  height: 21px;
+  width: 55px;
+  height: 54px;
 }
-.icon-operwhitnumb {
-  background-image: url(../images.png);
-  background-position: -21px 0px;
-  width: 18px;
-  height: 18px;
+.icon-physical {
+  background-image: url(../images/sprites.png);
+  background-position: -55px 0px;
+  width: 55px;
+  height: 54px;
 }
-.icon-paint {
-  background-image: url(../images.png);
-  background-position: 0px -21px;
-  width: 17px;
-  height: 25px;
+.icon-random {
+  background-image: url(../images/sprites.png);
+  background-position: 0px -54px;
+  width: 54px;
+  height: 55px;
+}
+.icon-textual {
+  background-image: url(../images/sprites.png);
+  background-position: -54px -54px;
+  width: 54px;
+  height: 55px;
+}
+.icon-visual {
+  background-image: url(../images/sprites.png);
+  background-position: -110px -54px;
+  width: 54px;
+  height: 54px;
 }

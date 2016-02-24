@@ -202,6 +202,12 @@ module.exports = function (grunt) {
 
     // Automatically inject Bower components into the HTML file
     wiredep: {
+      // task: {
+      //   src: [
+      //     'app/*.html',   // .html support...
+      //     'app/css/main.scss',  // .scss & .sass support...
+      //   ],
+      // },
       app: {
         ignorePath: /^\/|\.\.\//,
         src: ['<%= config.app %>/index.html'],
@@ -434,4 +440,5 @@ module.exports = function (grunt) {
     'build'
   ]);
   grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks('grunt-wiredep');
 };

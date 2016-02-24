@@ -1,14 +1,32 @@
+@import 'font-awesome.min';
+@import 'plugin';
 @import 'settings';
+  
+/* Colors variables*/
+$cb: #000;
+$cb-light: #131313;
+$cb-midle: #1F1F1F;
+$cw-dark: #C4C4C4;
+$cw: #fff;
 
-/* fonts */
-$primary-font: 'TTDrugsThin', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
-$secondary-font-condenced: 'Open Sans Condensed', sans-serif;
 
-/* colors */
-$primary-color: #ec3e01;
-$white-color: #ffffff;
-$gray-color: #333333;
+.app {background: $cb;
+}
+
+
+// CONTENT
+.content {padding: 50px 0;
+    .description {padding: 30px 25px 0;
+        h1 {margin-bottom: 5px;}
+        .sub-header {margin-bottom: 20px;}
+        h2 {display: inline-block; margin: 10px 0;}
+        ul {display: inline-block;}
+
+    }
+}
+
+// single video content
+
 
 body {
 
