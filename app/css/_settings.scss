@@ -77,6 +77,10 @@ $cb-midle: #1F1F1F;
 $cw-dark: #C4C4C4;
 $cw: #fff;
 
+// Transition
+a, button {
+	transition: all 0.3s ease-in;
+}
 // =======================================================================// 
 //                           AUTO SPRITES SYSTEM                           //        
 // =======================================================================//
@@ -123,7 +127,7 @@ button, select {-webkit-appearance: none;}
 
 /* for right vertical rhytm <p> margin-bottom = 2 х line-heigth (default 10px) */
 p {
-	// margin-bottom: 10px; 
+	margin-bottom: 20px; 
 }
 	/* <p> like header */
 	.lead { }
@@ -177,6 +181,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
+	@include font-type($c-font, 18px, 1.5, 0px, $cw-dark);
 }
 
 h4, .h4 {}
@@ -397,27 +402,35 @@ For select use .form-control or use multiple, for show more them one options.
 	
 /* buttons */
 .btn {
+	@include font-type($h-font, 15px, 20px, 0px, $cb-light);
+	text-transform: uppercase;
 
 	&:hover {
 		text-decoration: none;
 	}
 
 	&:after {
-		content: '';
+		content:'';
 		position: absolute;
 		top: 3px;
 		left: 2px;
-		border-radius: 3px;
 		z-index: -1;
 	}
 }
 
 .btn-default,
 .btn-primary {
-	@include font-type($h-font, 15px, 20px, 0px, $cb-light);
-	text-transform: uppercase;
+	
 }
-
+.btn-submit {
+	background: $cw;
+	&:hover {
+		text-decoration: none;
+		color: $cw-dark;
+		background: $cb-light;
+		border: 1px solid $cw-dark; 
+	}
+}
 /* images */
 img {
 	width: 100%;
@@ -425,7 +438,7 @@ img {
 }
 .img-responsive { }
 .img-rounded {}
-.img-circle {}
+.img-circle {border-radius: 50%;}
 .img-thumbnail {}
 
 /* System */

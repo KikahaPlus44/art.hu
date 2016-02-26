@@ -8,20 +8,41 @@ $cb-light: #131313;
 $cb-midle: #1F1F1F;
 $cw-dark: #C4C4C4;
 $cw: #fff;
+$co: #FF3300;
 
 
-.app {background: $cb;
+.app {background: $cb;}
+
+// LIKE-BOX
+.like-box {font-size: 26px; margin-top: 15px;
+
 }
-
-
-// CONTENT
-.content {padding: 50px 0;
+// FORMS
+form {
+    legend {@include font-type($c-font, 18px, 1.5, 0px, $cw-dark);}
+}
+// COMMENTS 
+.comments {margin-bottom: 50px;
+    .tittle {margin-bottom: 30px;}
+    h2 {@include font-type($h-font, 36px, 36px, 2px, $cw-dark);
+    
+    }
+    .comment {margin-bottom: 30px;}
+    .form-group {width: 75%; margin-right: 15px;
+        textarea {padding: 10px; width: 100%; border-radius: 3px;}
+        button  {width: 25%;}
+    }
+}
+//MEDIA CONTENT
+.media-content {padding: 50px 0;
     .description {padding: 30px 25px 0;
         h1 {margin-bottom: 5px;}
         .sub-header {margin-bottom: 20px;}
-        h2 {display: inline-block; margin: 10px 0;}
+        h2 {display: inline-block; margin:0;}
         ul {display: inline-block;}
-
+    }
+    .content {
+        margin-top: 20px;
     }
 }
 
