@@ -102,7 +102,15 @@ form {
     }
     .like-box {margin-top: 25px;}
 }
-
+// shop-audio 
+.shop-audio {
+    .media {margin-top: 20px;}
+    .description {padding: 0 25px 50px;}
+    .player {padding: 10px 0;
+        audio { vertical-align: top;}
+    }
+   
+}
 body {
 
   // Для телефонов (вертикальных)
