@@ -23,7 +23,7 @@
     
     <!--[if lt IE 11 ]><script type="text/javascript">window.location.href="ie6_close/index_ru.html";</script><![endif]-->   
 
-    <title>single multi-media content</title>
+    <title>single shop physical content</title>
     
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) css/vendor.css -->
@@ -50,7 +50,7 @@
 	<div class="app">
 
 		<!-- VIDEO CONTENT POST -->
-		<section class="section media-content shop-img">
+		<section class="section media-content shop-physical">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -69,6 +69,9 @@
 								cillum dolore eu fugiat nulla pariatur.</p>
 							</article>
 							<h2>Autor: <span>Alex Smith</span></h2><br>
+							<h2>Date of production: <span>15 may 2015</span></h2><br>
+							<h2>Weight(kg): <span>2</span></h2> | <h2> Size(sm): <span>30x40x50</span></h2><br>
+							<h2>Location: <span>Burkina Faso</span></h2><br>
 							<h2></i>Tags:</h2>
 							<ul class="list-inline tags">
 								<li><a href="#">video</a></li>
@@ -78,97 +81,16 @@
 								<li><a href="#">video</a></li>
 								<li><a href="#">video</a></li>
 							</ul>
-							<ul class="nav nav-pills">
-								<li  class="active"><a data-toggle="tab" href="#digital">Buy digital</a></li>
-							  	<li><a data-toggle="tab" href="#print">Buy print</a></li>
-							</ul>
-							<div class="tab-content">
-							  	<div id="digital" class="tab-pane fade in active digital">
-							  		<form class="form-horizontal">
-										<div class="form-group">
-											<label>
-											    <input type="radio" name="img-size" id="1size" value="1200px*800px">
-											    1200px * 800px - <span class="price">1</span> $
-											</label>
-											<label>
-											    <input type="radio" name="img-size" id="2size" value="2400px*1600px">
-											    2400px * 1600px - <span class="price">2</span> $
-											</label>
-											<label>
-											    <input type="radio" name="img-size" id="3size" value="4800px*3200px">
-											    4800px * 3200px - <span class="price">3</span> $
-											</label>
-										</div>
-										<button class="btn btn-submit">Add to Cart</button>
-									</form>
-							    </div>
-							    <div id="print" class="tab-pane fade canvas">
-								    <form>
-										<div class="form-group">
-											<legend>Size</legend>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-size" id="1size" value="32sm*45sm">
-											    32sm*45sm
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-size" id="2size" value="64sm*90sm">
-											    64sm*90sm
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-size" id="3size" value="90sm*128sm">
-											    90sm*128sm  
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-size" id="3size" value="90sm*128sm">
-											    Custom size* 
-											</label><br>
-											<small>*Details will update by manager after ordering</small>
-										</div>
-										<div class="form-group">
-											<legend>Material</legend>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-material" id="matterial-1" value="gloss-paper">
-											    Gloss paper
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-material" id="matterial-2" value="matte-paper">
-											    Matte paper
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-material" id="matterial-3" value="canvas">
-											    Canvas 
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="canvas-material" id="matterial-4" value="banner">
-											    Acrylic banner
-											</label>
-										</div>
-										<div class="form-group">
-											<legend>Frame</legend>
-											<label class="radio-inline">
-											    <input type="radio" name="frame-material" id="frame-1" value="Wood">
-											    <img src="images/frame.jpg" class="frame-prev">
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="frame-material" id="frame-2" value="matte-paper">
-											    <img src="images/frame.jpg" class="frame-prev">
-											</label>
-											<label class="radio-inline">
-											    <input type="radio" name="frame-material" id="frame-3" value="canvas">
-											    <img src="images/frame.jpg" class="frame-prev">
-											</label>
-										</div>
-										<div class="form-group">
-											<label for="zipcode">Delivery zipcode:</label>
-    										<input type="text" class="form-control" id="zipcode" placeholder="012345">
-    										<button class="btn btn-submit">Colculate price</button>
-										</div>
-										
-										<h2>Price: <span>20</span> $</h2>
-										<button class="btn btn-submit">Add to Cart</button>
-									</form>
-							    </div>
-							</div>
+							<form>
+								<div class="form-group">
+									<label for="zipcode">Delivery zipcode:</label>
+									<input type="text" class="form-control" id="zipcode" placeholder="012345">
+									<button class="btn btn-submit">Calculate price</button>
+								</div>
+								
+								<h2>Price: <span>150</span> $</h2>
+								<button class="btn btn-submit">Add to Cart</button>
+							</form>
 
 							<div class="like-box">
 								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
