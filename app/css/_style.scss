@@ -23,16 +23,19 @@ form {
 }
 // COMMENTS 
 .comments {margin-bottom: 50px;
+
     .tittle {margin-bottom: 30px;}
     h2 {@include font-type($h-font, 36px, 36px, 2px, $cw-dark);
-    
     }
+
     .comment {margin-bottom: 30px;}
     .form-group {width: 75%; margin-right: 15px;
         textarea {padding: 10px; width: 100%; border-radius: 3px;}
-        button  {width: 25%;}
     }
+
+    button {width: 22%;}
 }
+
 //MEDIA CONTENT
 .media-content {padding: 50px 0;
     .description {padding: 30px 25px 0;
@@ -40,13 +43,51 @@ form {
         .sub-header {margin-bottom: 20px;}
         h2 {display: inline-block; margin:0;}
         ul {display: inline-block;}
+        .nav-pills {margin: 20px 0 10px;
+            li a {@include font-type($h-font, 15px, 20px, 0px, $cw-dark);
+                text-transform: uppercase; text-decoration: none; 
+                margin-right: 10px;
+                border: 1px solid $cb;
+                &:hover {background: $cb; text-decoration: none; border: 1px solid $cw}
+            }
+
+            li.active a {background: $cb; text-decoration: none; border: 1px solid $cw;}
+        }
+        .tab-content {margin-bottom: 20px;
+            form {
+                .form-group {padding-left: 10px;}
+                label {display: block;}
+            }
+        }
+        .tab-content .digital {
+            label {margin-left: 5px;}
+        }
+        .tab-content .canvas {margin-bottom: 20px;
+            form {
+                .form-group {padding-left: 15px;}
+                legend {margin: 5px 0;}
+                label {display: inline-block;
+                    img {max-width: 90px;}
+                }
+
+                input[type="text"] {max-width: 80px; display: inline-block;}
+                button {margin-left: 10px; margin-top: -4px;}
+                h2 {margin-left: 14px;}
+            }
+        }
     }
     .content {
         margin-top: 20px;
     }
 }
-
-// single video content
+// shop-img
+.media-content.shop-img {
+    .media {margin-top: 20px;}
+    .description {
+        padding: 0 25px 50px;
+    }
+    .like-box {margin-top: 25px;}
+}
 
 
 body {
