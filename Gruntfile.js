@@ -283,12 +283,12 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
-          collapseBooleanAttributes: true,
-          collapseWhitespace: true,
-          conservativeCollapse: true,
-          removeAttributeQuotes: true,
-          removeCommentsFromCDATA: true,
-          removeEmptyAttributes: true,
+          collapseBooleanAttributes: false,
+          collapseWhitespace: false,
+          conservativeCollapse: false,
+          removeAttributeQuotes: false,
+          removeCommentsFromCDATA: false,
+          removeEmptyAttributes: false,
           removeOptionalTags: true,
           removeRedundantAttributes: true,
           useShortDoctype: true

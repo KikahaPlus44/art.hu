@@ -28,7 +28,8 @@
 // =======================================================================// 
 
 /* connecting google fonts */
-@import url(https://fonts.googleapis.com/css?family=Hammersmith+One);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,600);
+@import url(https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,700,500,500italic,400italic&subset=latin-ext);
 
 // Use http://everythingfonts.com/font-face 
@@ -66,9 +67,12 @@
 
 // Fonts variables
 // header font
-$h-font: 'Hammersmith One', sans-serif;
+
+$h-font: 'Raleway', sans-serif;
 // content font
-$c-font: 'Roboto Mono', sans-serif;
+$c-font: 'Goudy Bookletter 1911', serif;
+// number font
+$n-font: 'Roboto Mono', sans-serif;
 
 /* Colors variables*/
 $cb: #000;
@@ -89,16 +93,13 @@ a, button {
 // for create or update sprites run $ grunt sprites
 
 @import "sprites.css";
-	.icons {
-
-		display: inline-block;
-		position: relative;
-		vertical-align: middle;
-		display: -moz-inline-stack;
-		zoom: 1;
-		*display: inline;
-
-	}
+.icons {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	display: -moz-inline-stack;
+	zoom: 1;
+}
 
 // =======================================================================// 
 //    System-wide configuration classes and the vertical rhythm           //        
@@ -420,7 +421,16 @@ For select use .form-control or use multiple, for show more them one options.
 
 .btn-default,
 .btn-primary {
-	
+	background: $cb;
+	color: $cw-dark;
+	border: 1px solid $cb; 
+	font-weight: bold;
+	&:hover {
+		text-decoration: none;
+		color: $cw-dark;
+		background: $cb;
+		border: 1px solid $cw-dark; 
+	}
 }
 .btn-submit {
 	background: $cw;

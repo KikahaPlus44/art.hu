@@ -50,8 +50,8 @@
 
 		<!-- Application Header -->
 		<header class="header">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
 					
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -61,46 +61,40 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Brand</a>
+						<a class="navbar-brand" href="#"><img src="images/logo.png" alt="art.hu">ART.HU</a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-							<li><a href="#">Link</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-									<li class="divider"></li>
-									<li><a href="#">One more separated link</a></li>
-								</ul>
-							</li>
-						</ul>
-						<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Search">
-							</div>
-							<button type="submit" class="btn btn-default">Submit</button>
-						</form>
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">Link</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-								</ul>
-							</li>
-						</ul>
+						<div class="button-group filters-button-group">
+		  					<button class="button is-checked" data-filter=".physical, .audio, .visual, .text"><i class="icons icon-main"></i></button>
+						  	<button class="button" data-filter=".visual"><i class="icons icon-visual"></i></button>
+						  	<button class="button" data-filter=".audio"><i class="icons icon-audio"></i></button>
+						  	<button class="button" data-filter=".physical"><i class="icons icon-physical"></i></button>
+						  	<button class="button" data-filter=".text"><i class="icons icon-textual"></i></button>
+						  	<button class="button" data-filter=".sendbox"><i class="icons icon-random"></i></button>
+						</div>
+						<ul class="nav navbar navbar-top-links navbar-right">
+                        	<li>
+                        		<a href="admin/profile.html"><i class="fa fa-bell fa-fw"></i><span class="badge badge-red">3</span></a>
+                        	</li>
+                            
+	                        </li>
+	                        <li>
+	                        	<a href="admin/cart.html"><i class="fa fa-shopping-cart fa-fw"></i><span class="badge badge-red">2</span></a>
+	                        </li>
+	                        <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle"><i class="fa fa-cog"></i><span class="caret"></span></a>
+	                            <ul class="dropdown-menu dropdown-user pull-right">
+	                                <li><a href="profile.html"><i class="fa fa-user"></i>My Profile</a></li>
+	                                
+	                                <li><a href="addpost.html"><i class="fa fa-bullhorn"></i>Add Post</a></li>
+	                                <li><a href="addsail.html"><i class="fa fa-money"></i>Add For Sale</a></li>
+	                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>My Cart</a></li>
+	                                <li class="divider"></li>
+	                                <li><a href="Login.html"><i class="fa fa-key"></i>Log Out</a></li>
+	                            </ul>
+	                        </li>
+                    	</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
@@ -110,71 +104,293 @@
 		<section class="section">
 			<div class="container">
 				<!-- start massonry layout -->
-				<div class="button-group filters-button-group">
-  					<button class="button is-checked" data-filter=".physical, .audio, .visual, .text">show all</button>
-				  	<button class="button is-checked" data-filter=".visual">visual</button>
-				  	<button class="button" data-filter=".audio">audio</button>
-				  	<button class="button" data-filter=".physical">physical</button>
-				  	<button class="button" data-filter=".text">text</button>
-				  	<button class="button" data-filter=".sendbox">sendbox</button>
-				</div>
-
 				<div class="grid cs-style-3">
-					<div class="element-item visual">
-						<figure>
-							<img src="images/img-1.jpg" alt="img04">
-							<figcaption>
-								<h3>Settings</h3>
-								<span>Jacob Cummings</span>
-								<a href="http://dribbble.com/shots/1116685-Settings">Take a look</a>
-							</figcaption>
-						</figure>
+					<div class="element-item visual video">
+						<div class="embed-responsive embed-responsive-4by3">
+						  	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&showinfo=0" showinfo="0" frameborder="1" allowfullscreen ></iframe>
+						</div>
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">0</span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> 
+								<a href="#" title="bookmarks" class="bookmarks"><i class="fa fa-bookmark"></i></a> 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
 				  	</div>
-					
-				  	<div class="element-item audio">
-					    <figure>
-							<p><i class="fa fa-play"></i></p>
-							<figcaption>
-								<h3>Settings</h3>
-								<span>Jacob Cummings</span>
-								<a href="http://dribbble.com/shots/1116685-Settings">Take a look</a>
-							</figcaption>
-						</figure>
+					<div class="element-item audio">
+						<img src="images/audio.png" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5</span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a>  
+								<a href="#" title="Bookmarks" class="bookmarks"><i class="fa fa-bookmark"></i></a> 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<h2 class="price"><span >150</span>$</h2>
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
 				  	</div>
 				  	<div class="element-item physical">
-					    <figure>
-							<img src="images/img-1.jpg" alt="img04">
-							<figcaption>
-								<h3>Settings</h3>
-								<span>Jacob Cummings</span>
-								<a href="http://dribbble.com/shots/1116685-Settings">Take a look</a>
-							</figcaption>
-						</figure>
+						<img src="images/img-1.jpg" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+50</span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a>
+								<a href="#" title="bookmarks" class="bookmarks"><i class="fa fa-bookmark"></i></a> 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<h2 class="price"><span>1500</span>$</h2>
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
 				  	</div>
 				  	<div class="element-item text">
-					    <figure>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ad adipisci, quisquam. Architecto eveniet maxime quam, accusantium assumenda rem id et odio totam repellendus quaerat necessitatibus, at nesciunt! Reprehenderit, porro.</p>
-							<figcaption>
-								<h3>Settings</h3>
-								<span>Jacob Cummings</span>
-								<a href="http://dribbble.com/shots/1116685-Settings">Take a look</a>
-							</figcaption>
-						</figure>
+						<div class="text-content">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odio quod, neque dolore ducimus vel voluptatem repellendus amet quae non id, numquam, sequi reiciendis blanditiis pariatur porro architecto. Vel, temporibus?</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5</span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a> | 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="element-item visual ">
+						<img src="images/img-1.jpg" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5</span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a> | 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<h2>Price: <span>150</span> $</h2>
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
+				  	</div>
+					<div class="element-item audio">
+						<img src="images/audio.png" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5</span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a> | 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<h2><span class="price">150</span> $</h2>
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="element-item physical">
+						<img src="images/img-1.jpg" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5<span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a> | 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<h2>Price:<span>150</span> $</h2>
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="element-item text">
+						<div class="text-content">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header hidden">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odio quod, neque dolore ducimus vel voluptatem repellendus amet quae non id, numquam, sequi reiciendis blanditiis pariatur porro architecto. Vel, temporibus?</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5<span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a> | 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<a href="#"><h2>More...</h2></a>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="element-item visual ">
+						<img src="images/img-1.jpg" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5<span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a> | 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<h2><span>150</span>$</h2>
+								<a href="#" class="hidden"><h2>More...</h2></a>
+							</div>
+						</div>
+				  	</div>
+					<div class="element-item audio">
+						<img src="images/audio.png" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5<span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a>  
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<h2>Price: <span class="price">150</span> $</h2>
+								<a href="#"><h2>More...</h2></a>
+							</div>
+						</div>
 				  	</div>
 				  	<div class="element-item sendbox">
-					    <figure>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ad adipisci, quisquam. Architecto eveniet maxime quam, accusantium assumenda rem id et odio totam repellendus quaerat necessitatibus, at nesciunt! Reprehenderit, porro.</p>
-							<figcaption>
-								<h3>Settings</h3>
-								<span>Jacob Cummings</span>
-								<a href="http://dribbble.com/shots/1116685-Settings">Take a look</a>
-							</figcaption>
-						</figure>
+						<img src="images/img-1.jpg" alt="img04">
+						<div class="post-header hidden">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5<span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a>  
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<a href="#" class="hidden" ><h2>More...</h2></a>
+							</div>
+						</div>
+				  	</div>
+				  	<div class="element-item sendbox">
+						<div class="text-content">
+							<h2>Placeholder for item name</h2>
+							<p class="sub-header hidden">posted by <a class="username" href="#">%username%</a> 11.11.2011</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odio quod, neque dolore ducimus vel voluptatem repellendus amet quae non id, numquam, sequi reiciendis blanditiis pariatur porro architecto. Vel, temporibus?</p>
+						</div>
+						<div class="element-item_panel">
+							<div class="like-box">
+								<a href="#" title="like"><i class="fa fa-thumbs-up"></i></a>
+								<span class="like-box-counter">+5<span>
+								<a href="#" title="dislike"><i class="fa fa-thumbs-down"></i></a> | 
+								<a href="#" title="favorites"><i class="fa fa-bookmark"></i></a> | 
+								<ul class="list-inline social hidden">
+									<li><a href="#" title="share"><i class="fa fa-facebook-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-twitter-square"></i></a></li>
+									<li><a href="#" title="share"><i class="fa fa-tumblr-square"></i></a></li>
+									<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
+								</ul>
+								<a href="#"><h2>More...</h2></a>
+							</div>
+						</div>
 				  	</div>
 				</div>
 			</div>
 		</section>
-				
+		<section class="section load_more">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<button type="submit" class="btn btn-default btn-lg ">Load More Content</button>
+					</div><!-- col -->
+				</div><!-- row -->
+			</div>
+		</section>		
 		<!-- Application Footer -->
 		<footer class="footer">
 			<div class="container">
@@ -215,6 +431,7 @@
     <script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
     <!-- for hover -->
     <script src="js/toucheffects.js"></script>
+    <script src="js/bootstrap-hover-dropdown.js"></script>
 		
  	<script >
 	 
@@ -222,27 +439,31 @@
 	  // init Isotope
 	  var $grid = $('.grid').isotope({
 	    itemSelector: '.element-item',
-	    layoutMode: 'fitRows',
+	    percentPosition: true,
+	    // masonry: {
+	    // 	// use outer width of grid-sizer for columnWidth
+	    // 	columnWidth: '.grid-sizer'
+	    // },
 	    filter: '.physical, .audio, .visual, .text'
 	  });
 	  // filter functions
-	  var filterFns = {
-	    // show if number is greater than 50
-	    numberGreaterThan50: function() {
-	      var number = $(this).find('.number').text();
-	      return parseInt( number, 10 ) > 50;
-	    },
-	    // show if name ends with -ium
-	    ium: function() {
-	      var name = $(this).find('.name').text();
-	      return name.match( /ium$/ );
-	    }
-	  };
+	  // var filterFns = {
+	  //   // show if number is greater than 50
+	  //   numberGreaterThan50: function() {
+	  //     var number = $(this).find('.number').text();
+	  //     return parseInt( number, 10 ) > 50;
+	  //   },
+	  //   // show if name ends with -ium
+	  //   ium: function() {
+	  //     var name = $(this).find('.name').text();
+	  //     return name.match( /ium$/ );
+	  //   }
+	  // };
 	  // bind filter button click
 	  $('.filters-button-group').on( 'click', 'button', function() {
 	    var filterValue = $( this ).attr('data-filter');
 	    // use filterFn if matches value
-	    filterValue = filterFns[ filterValue ] || filterValue;
+	    // filterValue = filterFns[ filterValue ] || filterValue;
 	    $grid.isotope({ filter: filterValue });
 	  });
 	  // change is-checked class on buttons

@@ -9,23 +9,101 @@ $cb-midle: #1F1F1F;
 $cw-dark: #C4C4C4;
 $cw: #fff;
 $co: #FF3300;
+.badge-red {background: $co;}
+// APP
+.app {background: $cb; padding-top: 100px;}
 
+// MAIN PAGE
+// nav
+.navbar-default {background: $cb; border: none; min-height: 70px;
+    .navbar-brand {@include font-type($h-font, 32px, 32px, 2px, $cw-dark);
+        text-decoration: none;
+        img {max-width: 25px; vertical-align: baseline; margin-right:10px;}
+    }
+    .navbar-collapse {position: relative;
+        .navbar-right {position: absolute; top: 0; right: 0;}
+    }
+    .nav a {@include font-type($h-font, 18px, 1.5, 0px, $cw-dark);
+        text-decoration: none;    
+    }
+    .navbar-top-links {padding: 12px 0;
+        li {display: inline-block; padding: 0 10px;
 
-.app {background: $cb;}
+            img {max-width:25px;}
+            a {padding: 5px;
+                // &:hover {background: transparent;}
+                .badge {padding: 4px 7px; position: absolute; left: 25px; top: 0px;}
+            }
+            .caret {float: right; margin-top: 10px;}
+        }
+        .dropdown-user {
+            li {
+                a { i {padding-right: 10px;}}
+            }
+        }
+    }
+}
+// card title 
+.element-item {
+    .post-header {position: absolute; top: 0; left: 0; width: 100%;  text-align: center;
+                padding: 10px 10px 0; background: rgba(0, 0, 0, 0.6); 
+        h2 {margin-top: 0; margin-bottom: 0;}
+    }
+}
+// text card extra styles
+.text-content {padding: 0 20px;
 
+}
+.element-item.text,  {
+    a {h2{padding-left: 0px;}}
+}
+// sendbox extra sryles 
+.element-item.sendbox {
+    a {h2{padding-left: 0px;}}
+}
+// video card extra sryles
+.element-item .embed-responsive {
+    // margin-top: 35px;
+}
+.element-item.video {
+    a {h2{padding-left: 0px;}}
+}
+// hover inside 
+.element-item_panel {
+    h2 {margin-top: 0; margin-bottom: 0; display: inline-block; color: $co;}
+    a {h2{padding-left: 60px;}}
+    .like-box {text-align: center; margin-top: 0;
+        ul {display: inline-block;}
+    }
+}
+
+// isotop nav 
+.filters-button-group {text-align: center; margin-bottom: 50px; width: 65%; margin: 0 auto;
+    button {background: none; border: none; padding: 5px 20px; 
+        &:hover, &:active {box-shadow: 0px 5px 0px 0px $co;}
+        &:focus {outline: none;}
+    }
+    button.is-checked {
+        box-shadow: 0px 5px 0px 0px $co;
+    }
+}
 // LIKE-BOX
-.like-box {font-size: 26px; margin-top: 15px;
-
+.like-box {font-size: 22px;
+    .like-box-counter {@include font-type($n-font, 22px, 1.5, 0.5px, inherit); font-weight: bold; padding: 0 3px;}
+    .price {@include font-type($n-font, 22px, 28px, 0.5px, $co); font-weight: bold;}
+    .bookmarks {padding: 0 12px 0 12px;}
 }
 // FORMS
 form {
     legend {@include font-type($c-font, 18px, 1.5, 0px, $cw-dark);}
 }
+
 // COMMENTS 
 .comments {margin-bottom: 50px;
 
     .tittle {margin-bottom: 30px;}
     h2 {@include font-type($h-font, 36px, 36px, 2px, $cw-dark);
+
     }
 
     .comment {margin-bottom: 30px;}
@@ -34,6 +112,10 @@ form {
     }
 
     button {width: 22%;}
+}
+// load more 
+
+.load_more {margin: 50px 0; text-align: center;
 }
 
 //MEDIA CONTENT
@@ -97,7 +179,6 @@ form {
             label {display: inline-block;}
             input[type="text"] {max-width: 80px; display: inline-block;}
             button {margin-left: 10px; margin-top: -4px;}
-            
         }
     }
     .like-box {margin-top: 25px;}

@@ -1,0 +1,35 @@
+/*LOGIN and SIGNIN*/
+.signin-form , .login-form {margin-top: 100px;}
+
+.signin-form button, .login-form button {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.signin-form {
+	padding: 0 30px;
+}
+.btn-google, .btn-facebook {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.btn-facebook {
+	background: #44619D;
+	color: #fff;
+}
+.btn-google {
+	border: 1px solid #ccc;
+}
+/*SHOPING CART*/
+
+.delivery b {margin: 10px 0 5px; display: inline-block; font-size: 14px;}
+
+.delivery .controls {margin-bottom: 10px;}
+
+.profit button {margin-top: 30px;}
+
+.cart .badge {
+	height: 24px;
+	padding: 3px 7px;
+}
+.cart .badge i {font-size: 12px;}
+.cart-item_info span {display: inline-block; padding: 5px 0;}

@@ -15,12 +15,11 @@
 .element-item {
   position: relative;
   float: left;
-  width: 32%;
+  width: 23%; 
   height: auto;
-  margin: 5px;
-  
-  background: #888;
-  color: #262524;
+  margin: 10px;
+  color: #C4C4C4;
+  background: #1F1F1F;
 }
 
 .element-item > * {
@@ -31,6 +30,8 @@
 // SUPER HOVER
 .grid {
 	text-align: center;
+	position: relative;
+	margin-left: 35px;
 }
 
 .grid div {
@@ -38,65 +39,51 @@
 	position: relative;
 }
 
-.grid figure {
-	margin: 0;
+.grid .element-item {
+	margin: 10px;
 	position: relative;
 }
 
-.grid figure img {
+.grid .element-item img {
 	max-width: 100%;
 	display: block;
 	position: relative;
 }
 
-.grid figcaption {
+.grid .element-item_panel {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 20px;
-	background: #2c3f52;
-	color: #ed4e6e;
+	padding: 10px;
+	background: #131313;
+	color: #C4C4C4;
 }
 
-.grid figcaption h3 {
-	margin: 0;
-	padding: 0;
-	color: #fff;
-}
-
-.grid figcaption span:before {
-	content: 'by ';
-}
-
-.grid figcaption a {
-	text-align: center;
-	padding: 5px 10px;
-	border-radius: 2px;
-	display: inline-block;
-	background: #ed4e6e;
-	color: #fff;
-}
 /* Caption Style 3 */
-.cs-style-3 figure {
+.cs-style-3 .element-item  {
 	overflow: hidden;
 }
 
-.cs-style-3 figure img {
+.cs-style-3 .element-item img,
+.cs-style-3 .element-item .embed-responsive,
+.cs-style-3 .element-item .text-content {
 	-webkit-transition: -webkit-transform 0.4s;
 	-moz-transition: -moz-transform 0.4s;
 	transition: transform 0.4s;
 }
 
-.no-touch .cs-style-3 figure:hover img,
-.cs-style-3 figure.cs-hover img {
+.cs-style-3 .element-item:hover img,
+.cs-style-3 .element-item:hover .embed-responsive,
+.cs-style-3 .element-item:hover .text-content,  
+.cs-style-3 .element-item.cs-hover img {
 	-webkit-transform: translateY(-50px);
 	-moz-transform: translateY(-50px);
 	-ms-transform: translateY(-50px);
 	transform: translateY(-50px);
 }
 
-.cs-style-3 figcaption {
-	height: 100px;
+.cs-style-3 .element-item_panel {
+	height: 60px;
 	width: 100%;
 	top: auto;
 	bottom: 0;
@@ -110,8 +97,8 @@
 	transition: transform 0.4s, opacity 0.1s 0.3s;
 }
 
-.no-touch .cs-style-3 figure:hover figcaption,
-.cs-style-3 figure.cs-hover figcaption {
+.cs-style-3 .element-item:hover .element-item_panel,
+.cs-style-3 .element-item.cs-hover .element-item_panel {
 	opacity: 1;
 	-webkit-transform: translateY(0px);
 	-moz-transform: translateY(0px);
@@ -122,8 +109,3 @@
 	transition: transform 0.4s, opacity 0.1s;
 }
 
-.cs-style-3 figcaption a {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-}
