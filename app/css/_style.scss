@@ -43,19 +43,63 @@ $co: #FF3300;
         }
     }
 }
-// card title 
+// card 
 .element-item {
-    .post-header {position: absolute; top: 0; left: 0; width: 100%;  text-align: center;
-                padding: 10px 10px 0; background: rgba(0, 0, 0, 0.6); 
+    .post-header {width: 75%; text-align: center; float:right; padding: 10px 10px 0; display: none;
         h2 {margin-top: 0; margin-bottom: 0;}
     }
+    .social {display: none;}
+    .like-box {display: inline-block;}
+    .post-discription {display: none; padding: 0 40px;}
+    .more {display: none;}
+    .bye {display: none;}
+    .price {display: inline-block; @include font-type($n-font, 22px, 28px, 0.5px, $co); font-weight: bold;}
+    .player {display: none; text-align: center;}
+    .element-item_panel {text-align: center;}
 }
+
+// open card 
+.element-item.open {width: 100%; z-index: 100; margin-left: -3px; 
+    img {width: 25%; float:left; cursor: pointer;} 
+    .post-header {display: block;}
+    .player {display: block;}
+    .element-item_panel {position: static; width: 75%; float: right; text-align: center;
+        .social {display: inline-block; font-size: 22px; padding: 0 10px;}
+        .like-box {display: inline-block;}
+        .more {display: block; @include font-type($n-font, 22px, 28px, 0.5px, $co); font-weight: bold; text-transform: uppercase;}
+    }
+    .post-discription {display: block;  width: 75%; float: right; text-align: center;}
+    .next {position: absolute; top: 0; right: -60px; cursor: pointer; background: #1F1F1F; width: 60px; height: 100%;};
+    .prev {position: absolute; top: 0; left: -60px; cursor: pointer; background: #1F1F1F; width: 60px; height: 100%;};
+}
+.cs-style-3 .element-item.open {
+    overflow: visible;
+} 
+/*video click hack*/
+.element-item.visual.open {
+    .open-js {display: none;}
+    .video-holder {max-width: 25%;
+        .embed-responsive {}
+        .embed-responsive.embed-responsive-4by3 {
+            padding-bottom: 55%;
+        }
+    }
+    .post-header {position: absolute; top: 0; width: 75%; right: 0;}
+    .element-item_panel {position: absolute; top: 50px; width: 75%; left: 25%;}
+}
+
+// open text card styles 
+.element-item.text.open {
+    .element-item_panel {width: 100%;}
+}
+
 // text card extra styles
 .text-content {padding: 0 20px;
 
 }
 .element-item.text,  {
     a {h2{padding-left: 0px;}}
+
 }
 // sendbox extra sryles 
 .element-item.sendbox {
@@ -65,11 +109,12 @@ $co: #FF3300;
 .element-item .embed-responsive {
     // margin-top: 35px;
 }
-.element-item.video {
+.element-item.visual {
+    .open-js {height: 145px; margin-top: -145px;}
     a {h2{padding-left: 0px;}}
 }
 // hover inside 
-.element-item_panel {
+.element-item_panel { 
     h2 {margin-top: 0; margin-bottom: 0; display: inline-block; color: $co;}
     a {h2{padding-left: 60px;}}
     .like-box {text-align: center; margin-top: 0;
@@ -87,12 +132,14 @@ $co: #FF3300;
         box-shadow: 0px 5px 0px 0px $co;
     }
 }
+
 // LIKE-BOX
 .like-box {font-size: 22px;
     .like-box-counter {@include font-type($n-font, 22px, 1.5, 0.5px, inherit); font-weight: bold; padding: 0 3px;}
-    .price {@include font-type($n-font, 22px, 28px, 0.5px, $co); font-weight: bold;}
+    .price {}
     .bookmarks {padding: 0 12px 0 12px;}
 }
+
 // FORMS
 form {
     legend {@include font-type($c-font, 18px, 1.5, 0px, $cw-dark);}
@@ -113,12 +160,12 @@ form {
 
     button {width: 22%;}
 }
-// load more 
+ /*load more */
 
 .load_more {margin: 50px 0; text-align: center;
 }
 
-//MEDIA CONTENT
+/*MEDIA CONTENT*/
 .media-content {padding: 50px 0;
     .description {padding: 30px 25px 0;
         h1 {margin-bottom: 5px;}
@@ -188,7 +235,7 @@ form {
     .media {margin-top: 20px;}
     .description {padding: 0 25px 50px;}
     .player {padding: 10px 0;
-        audio { vertical-align: top;}
+        audio {vertical-align: top;}
     }
    
 }

@@ -8,6 +8,9 @@
   display: block;
   clear: both;
 }
+.grid {
+	margin: 0 auto;
+}
 
 /* ---- grid-item ---- */
 
@@ -15,9 +18,8 @@
 .element-item {
   position: relative;
   float: left;
-  width: 23%; 
+  width: 300px; 
   height: auto;
-  margin: 10px;
   color: #C4C4C4;
   background: #1F1F1F;
 }
@@ -31,7 +33,7 @@
 .grid {
 	text-align: center;
 	position: relative;
-	margin-left: 35px;
+	
 }
 
 .grid div {
@@ -59,7 +61,7 @@
 	color: #C4C4C4;
 }
 
-/* Caption Style 3 */
+/* Prew card hover */
 .cs-style-3 .element-item  {
 	overflow: hidden;
 }
@@ -109,3 +111,28 @@
 	transition: transform 0.4s, opacity 0.1s;
 }
 
+// open card no hover
+.grid .element-item_panel {
+	
+}
+.cs-style-3 .element-item.open .element-item_panel {
+	position: static;
+	padding: 10px;
+	background: transparent;
+	color: #C4C4C4;
+	width: 75%;
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+.cs-style-3 .element-item.open:hover img,
+.cs-style-3 .element-item.open:hover .embed-responsive,
+.cs-style-3 .element-item.open:hover .text-content,  
+.cs-style-3 .element-item.open.cs-hover img {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
